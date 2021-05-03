@@ -3,113 +3,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="main.js"></script>
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
 </head>
 
 <body>
-  Home
-  About us
-  Create your plan
+  <ul class="header">
+    <li>
+      <img src="assets/shared/desktop/logo.svg" style="margin-top: 8px;">
+    </li>
+    <li style="float:right">
+      <a href="#plan">CREATE YOUR PLAN</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#home">HOME</a>
+    </li>
+  </ul>
 
-  Create a plan
-  Build a subscription plan that best fits your needs. We offer an assortment of the best 
-  artisan coffees from around the globe delivered fresh to your door.
+  <div class="heroWrapper">
+    <div class="hero">
+      <div class="textWrapper">
+        <div id="createPlan">Create a plan</div>
+        <p>Build a subscription plan that best fits your needs. We offer an assortment of the best
+        artisan coffees from around the globe delivered fresh to your door.</p>
+      </div>
+    </div>
+  </div>
 
-  01
-  Pick your coffee
-  Select from our evolving range of artisan coffees. Our beans are ethically
-  sourced and we pay fair prices for them. There's new coffees in all profiles
-  every month for you to try out.
+  <div class="stepsWrapper">
+    <div class="steps-bg">
+      <div class="instructionWrapper">
+        <div class="number">01</div>
+        <div class="instruction">Pick your coffee</div>
+        <p>Select from our evolving range of artisan coffees. Our beans are ethically
+        sourced and we pay fair prices for them. There's new coffees in all profiles
+        every month for you to try out.</p>
+      </div>
+      
+      <div class="instructionWrapper">
+        <div class="number">02</div>
+        <div class="instruction">Choose the frequency</div>
+        <p>Customize your order frequency, quantity, even your roast style and grind type.
+        Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+      </div>
+      
+      <div class="instructionWrapper">
+        <div class="number">03</div>
+        <div class="instruction">Receive and enjoy!</div>
+        We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+        world-class coffees curated to provide a distinct tasting experience.
+      </div>
+    </div>
+  </div>
+
+  <div class="user-select">
+    <ul class="list-steps">
+      <li id="preferenceOne">01 Preferences</li>
+      <li id="beanTypeTwo">02 Bean type</li>
+      <li id="quantityThree">03 Quantity</li>
+      <li id="grindFour">04 Grind option</li>
+      <li id="deliveryFive" style="border-bottom: none">05 Deliveries</li>
+    </ul>
   
-  02
-  Choose the frequency
-  Customize your order frequency, quantity, even your roast style and grind type.
-  Pause, skip or cancel your subscription with no commitment through our online portal.
-  
-  03
-  Receive and enjoy!
-  We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
-  world-class coffees curated to provide a distinct tasting experience.
+    <div class="list-dropdown">
+      <div class="step">
+        <h2>How do you drink your coffee? <i class="arrow-down"></i></h2>
+        <div id="preferences">
+          <div id="capsule" class="preference-options" onclick=showTypeOfCoffee(this.id)>
+            <h3>Capsule</h3>
+            <p>Compatible with Nespresso systems and similar brewers</p>
+          </div>
 
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
+          <div id="filtered" class="preference-options" onclick=showTypeOfCoffee(this.id)>
+            <h3>Filter</h3>
+            For pour over or drip methods like Aeropress, Chemex, and V60
+          </div>
 
-  How do you drink your coffee?
+          <div id="espresso" class="preference-options" onclick=showTypeOfCoffee(this.id)>
+            <h3>Espresso</h3>
+            Dense and finely ground beans for an intense, flavorful experience
+          </div>
+        </div>
+      </div>
 
-  Capsule
-  Compatible with Nespresso systems and similar brewers
+      <div class="step">
+        <h2>What type of coffee? <i class="arrow-down"></i></h2>
+        <div id="typeOfCoffee" style="display:none;">
+          <div id="singleOrigin" class="type-options" onclick=showQuantity(this.id)>
+            <h3>Single origin</h3>
+            <p>Distinct, high quality coffee from a specific family-owned farm</p>
+          </div>
+          <div id="decaf" class="type-options" onclick=showQuantity(this.id)>
+            <h3>Decaf</h3>
+            <p>Just like regular coffee, except the caffeine has been removed</p>
+          </div>
+          <div id="blended" class="type-options" onclick=showQuantity(this.id)>
+            <h3>Blended</h3>
+            <p>Combination of two or three dark roasted beans of organic coffees</p>
+          </div>
+        </div>
+      </div>
 
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
+      <div class="step">
+        <h2>How much would you like? <i class="arrow-down"></i></h2>
+        <div id="quantity" style="display:none;">
+          <div id="solo" class="quantity-options" onclick=showGrindOptions(this.id)>
+            <h3>250g</h3>
+            <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          </div>
+          <div id="couple" class="quantity-options" onclick=showGrindOptions(this.id)>
+            <h3>500g</h3>
+            <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+          </div>
+          <div id="office" class="quantity-options" onclick=showGrindOptions(this.id)>
+            <h3>1000g</h3>
+            <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="step">
+        <h2>Want us to grind them? <i class="arrow-down"></i></h2>
+        <div id="grind" style="display:none;">
+          <div id="wholebean" class="grind-options" onclick=showDelivery(this.id)>
+            <h3>Wholebean</h3>
+            <p>Best choice if you cherish the full sensory experience</p>
+          </div>
+          <div id="filter" class="grind-options" onclick=showDelivery(this.id)>
+            <h3>Filter</h3>
+            <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          </div>
+          <div id="cafetiere" class="grind-options" onclick=showDelivery(this.id)>
+            <h3>Cafetiére</h3>
+            <p>Course ground beans specially suited for french press coffee</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="step">
+        <h2>How often should we deliver? <i class="arrow-down"></i></h2>
+        <div id="delivery" style="display:none;">
+          <div id="weekly" class="delivery-options" >
+            <h3>Every week</h3>
+            <p>$14.00 per shipment. Includes free first-class shipping.</p>
+          </div>
+          <div id="biweekly" class="delivery-options" >
+            <h3>Every 2 weeks</h3>
+            <p>$17.25 per shipment. Includes free priority shipping.</p>
+          </div>
+          <div id="monthly" class="delivery-options" >
+            <h3>Every month</h3>
+            <p>$22.50 per shipment. Includes free priority shipping.</p>
+          </div>
+        </div>
+      </div>
 
-  Espresso
-  Dense and finely ground beans for an intense, flavorful experience
+      <div class="step">
+        <div class="summaryWrapper">
+          <p>Order Summary</p>
+          <p>“I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+          sent to me _____.”</p>
+        </div>
+        <button>Create my plan!</button>
+      </div>
 
-  What type of coffee?
+    </div>
 
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
+  </div>
 
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
+ 
 
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
 
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
 
   <!-- Modal -->
-  Order Summary
+  <div>
+    Order Summary
 
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
+    “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
+    sent to me _____.”
 
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
+    Is this correct? You can proceed to checkout or go back to plan selection if something 
+    is off. Subscription discount codes can also be redeemed at the checkout.
 
-  $_____/month
+    $_____/month
 
-  Checkout
+    Checkout
+  </div>
   <!-- End modal -->
 
   Home
