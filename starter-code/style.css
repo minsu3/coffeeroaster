@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.header {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.header li {
+  float: left;
+}
+
+.header a {
+  display: block;
+  color: rgb(145, 145, 145);
+  padding: 14px 16px;
+  text-decoration: none;
+  float: right;
+}
+
+/* Main banner */
+
+.heroWrapper {
+  margin: 0 50px 0 50px;
+}
+
+.hero {
+  background-image: url("./assets/plan/desktop/image-hero-blackcup.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 7px;
+}
+
+.textWrapper {
+  text-align: left;
+  color: white;
+  width: 600px;
+}
+
+#createPlan {
+  padding: 100px 0 40px 100px;
+  font-size: 60px;
+}
+
+.textWrapper p {
+  padding-left: 100px;
+  margin-right: 80px;
+}
+
+/* 3 steps */
+
+.stepsWrapper {
+  margin: 50px 50px 0 50px;
+}
+
+.steps-bg {
+  background-image: url("./assets/plan/desktop/bg-steps.png");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.instructionWrapper {
+  color: white;
+  text-align: left;
+  width: 200px;
+  margin-top: 150px;
+}
+
+.number {
+  color: rgb(253, 214, 186);
+  font-size: 60px;
+}
+
+.instruction {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+/* 5 steps */
+
+.user-select {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.list-steps {
+  margin-left: 60px;
+  padding: 15px;
+}
+
+.list-steps li {
+  display: block;
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  color: rgb(173, 173, 173);
+}
+
+#preferenceOne {
+  color: black;
+}
+
+.step {
+  text-align: left;
+}
+
+.step h2 {
+  padding: 20px 0;
+}
+
+/* How do you drink your coffee? */
+
+.arrow-down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  float: right;
+  color: rgb(14, 135, 134);
+}
+
+#preferences {
+  display: flex;
+}
+
+.preference-options {
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.preference-options:hover,
+.preference-options:focus {
+  background-color: rgb(14, 135, 134);
+  color: white;
+}
+
+/* What type of coffee? */
+
+#typeOfCoffee {
+  display: flex;
+}
+
+.type-options {
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 180px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.type-options:hover,
+.type-options:focus {
+  background-color: rgb(14, 135, 134);
+  color: white;
+}
+
+/* How much would you like? */
+
+#quantity {
+  display: flex;
+}
+
+.quantity-options {
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 180px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.quantity-options:hover,
+.quantity-options:focus {
+  background-color: rgb(14, 135, 134);
+  color: white;
+}
+
+/* Want us to grind them? */
+
+#grind {
+  display: flex;
+}
+
+.grind-options {
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 180px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.grind-options:hover,
+.grind-options:focus {
+  background-color: rgb(14, 135, 134);
+  color: white;
+}
+
+/* How often should we deliver? */
+
+#delivery {
+  display: flex;
+}
+
+.delivery-options {
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 180px;
+  cursor: pointer;
+}
+
+.delivery-options:hover,
+.delivery-options:focus {
+  background-color: rgb(14, 135, 134);
+  color: white;
+}
+
+.summaryWrapper {
+  background-image: url("./assets/plan/desktop/bg-order-summary.png");
+  color: white;
+  padding: 20px 40px 20px 40px;
+  border-radius: 7px;
+}
+
+.step button {
+  float: right;
+  margin-top: 40px;
+  padding: 20px 40px 20px 40px;
+  border: none;
+  background-color: rgb(14, 135, 134);
+  color: white;
+  border-radius: 7px;
+}
