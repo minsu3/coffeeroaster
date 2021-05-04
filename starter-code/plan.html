@@ -11,7 +11,7 @@
 <body>
   <ul class="header">
     <li>
-      <img src="assets/shared/desktop/logo.svg" style="margin-top: 8px;">
+      <img src="assets/shared/desktop/logo.svg" >
     </li>
     <li style="float:right">
       <a href="#plan">CREATE YOUR PLAN</a>
@@ -143,17 +143,17 @@
       <div class="step">
         <h2>How often should we deliver? <i class="arrow-down"></i></h2>
         <div id="delivery" style="display:none;">
-          <div id="weekly" class="delivery-options" >
+          <div id="weekly" class="delivery-options" onclick=selectDelivery(this.id)>
             <h3>Every week</h3>
-            <p>$14.00 per shipment. Includes free first-class shipping.</p>
+            <p><span id="weekPrice">$14.00</span> per shipment. Includes free first-class shipping.</p>
           </div>
-          <div id="biweekly" class="delivery-options" >
+          <div id="biweekly" class="delivery-options" onclick=showDelivery(this.id)>
             <h3>Every 2 weeks</h3>
-            <p>$17.25 per shipment. Includes free priority shipping.</p>
+            <p><span id="biweeklyPrice">$17.25</span> per shipment. Includes free priority shipping.</p>
           </div>
-          <div id="monthly" class="delivery-options" >
+          <div id="monthly" class="delivery-options" onclick=showDelivery(this.id)>
             <h3>Every month</h3>
-            <p>$22.50 per shipment. Includes free priority shipping.</p>
+            <p><span id="monthlyPrice">$22.50</span> per shipment. Includes free priority shipping.</p>
           </div>
         </div>
       </div>
@@ -161,39 +161,52 @@
       <div class="step">
         <div class="summaryWrapper">
           <p>Order Summary</p>
-          <p>“I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-          sent to me _____.”</p>
+          <p id="orderSummary">“I drink coffee <span id="one">_____</span>, with a <span id="two">_____</span> type of bean. 
+          <span id="three">_____</span> ground ala <span id="four">_____</span>,
+          sent to me <span id="five">_____</span>.”</p>
         </div>
-        <button>Create my plan!</button>
+        <button onclick=openModal()>Create my plan!</button>
       </div>
-
     </div>
-
   </div>
 
- 
-
-
-
   <!-- Modal -->
-  <div>
-    Order Summary
+  <div id="modal">
+    <div class="modal-content">
+    <div id="order-bg">
+      <h1>Order Summary</h1>
+    </div>
+    <div id="sentenceWrapper">
+      <div id="sentence"></div>
+      <p>Is this correct? You can proceed to checkout or go back to plan selection if something
+      is off. Subscription discount codes can also be redeemed at the checkout.</p>
 
-    “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-    sent to me _____.”
-
-    Is this correct? You can proceed to checkout or go back to plan selection if something 
-    is off. Subscription discount codes can also be redeemed at the checkout.
-
-    $_____/month
-
-    Checkout
+      <div class="priceCheckout">
+        <div class="monthlyPrice">$<span id="price"></span>/month</div>
+        <div class="checkout" onclick="closeModal()">Checkout</div>
+      </div>
+    </div>
+    </div>
   </div>
   <!-- End modal -->
 
-  Home
-  About us
-  Create your plan
+  <footer>
+    <ul class="footer">
+      <li>
+        <img src="assets/shared/desktop/logo.svg" style="margin-top: 12px;">
+      </li>
+      <li style="margin-top: 8px">
+        <a href="#plan">CREATE YOUR PLAN</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#home">HOME</a>
+      </li>
+      <li style="float:right">
+        <a href="#instagram"><img src="assets/shared/desktop/icon-instagram.svg"></a>
+        <a href="#twitter"><img src="assets/shared/desktop/icon-twitter.svg" style="margin-top: 3px" ></a>
+        <a href="#facebook"><img src="assets/shared/desktop/icon-facebook.svg"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
 
 </html>
