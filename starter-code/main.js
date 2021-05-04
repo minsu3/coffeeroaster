@@ -10,17 +10,23 @@ function openModal() {
   let orderSummary = document.getElementById("orderSummary").textContent;
   console.log(orderSummary); // the sentence
   document.getElementById("sentence").innerHTML = orderSummary;
+  totalPrice(orderSummary);
+}
 
-  let keywords = ["Every week", "Every 2 weeks", "Every month"];
-  const matched = [];
-  for (let index = 0; index < orderSummary.length; index++) {
-    for (let i = 0; i < keywords.length; i++) {
-      if (orderSummary[index].includes(keywords[i])) {
-        matched.push(keywords[i]);
-      }
+function totalPrice(orderSummary) {
+  let stringToArray = orderSummary.split(" ");
+  console.log("string to array: ", stringToArray);
+  for (let i = 0; i < stringToArray.length; i++) {
+    if (stringToArray[i] == "month.") {
+      document.getElementById("price").innerHTML = "64.00";
+    }
+    if (stringToArray[i] == "weeks.") {
+      document.getElementById("price").innerHTML = "34.50";
+    }
+    if (stringToArray[i] == "week.") {
+      document.getElementById("price").innerHTML = "22.50";
     }
   }
-  console.log("The matched keywords are =", matched);
 }
 
 function closeModal() {
