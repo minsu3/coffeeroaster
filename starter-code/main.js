@@ -18,13 +18,13 @@ function totalPrice(orderSummary) {
   console.log("string to array: ", stringToArray);
   for (let i = 0; i < stringToArray.length; i++) {
     if (stringToArray[i] == "month.") {
-      document.getElementById("price").innerHTML = "64.00";
+      document.getElementById("price").innerHTML = "22.50";
     }
     if (stringToArray[i] == "weeks.") {
       document.getElementById("price").innerHTML = "34.50";
     }
     if (stringToArray[i] == "week.") {
-      document.getElementById("price").innerHTML = "22.50";
+      document.getElementById("price").innerHTML = "54.00";
     }
   }
 }
