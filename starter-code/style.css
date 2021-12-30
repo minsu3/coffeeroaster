@@ -63,16 +63,17 @@ body {
 
 .stepsWrapper {
   margin: 50px 50px 0 50px;
-}
-
-.steps-bg {
   background-image: url("./assets/plan/desktop/bg-steps.png");
   height: 450px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   border-radius: 7px;
+  padding-top: 50px;
+}
+
+.steps-bg {
+  position: relative;
   display: flex;
   justify-content: space-around;
   padding: 0 50px;
@@ -83,6 +84,11 @@ body {
   text-align: left;
   width: 200px;
   margin-top: 50px;
+}
+
+.line-circle {
+  content: "";
+  border-top: 2px solid rgb(253, 214, 186);
 }
 
 .number {
