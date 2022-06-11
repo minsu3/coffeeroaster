@@ -17,7 +17,7 @@ The interactive subscription page has a number of specific behaviours, which are
   - If "Filter" or "Espresso" are selected, update the order summary text to:
     - "I drink my coffee **as** Filter||Espresso"
     - Keep/Add the grind selection text
-  - For all other selections, add the selection title in the blank space where appropriat`e
+  - For all other selections, add the selection title in the blank space where appropriate
 - Updating per shipment price (shown in "How often should we deliver?" section at the bottom) based on weight selected
   - If 250g weight is selected
     - Every Week price per shipment is $7.20
