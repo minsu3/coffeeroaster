@@ -1,4 +1,4 @@
-URL: https://minsu3.github.io/coffeeroaster/starter-code/plan.html
+URL: https://minsu3.github.io/coffeeroaster/code/plan.html
 
 The users should be able to:
 
