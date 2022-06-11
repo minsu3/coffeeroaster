@@ -1,3 +1,5 @@
+URL: https://minsu3.github.io/coffeeroaster/starter-code/plan.html
+
 The users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
